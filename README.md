@@ -39,6 +39,8 @@ Before running the setup, make sure you have the following installed:
 - **Health Check**:
   - `pg_isready -U postgres`
 - **Restart Policy**: `always`
+- **Volumes**:
+  - `postgres_data:/var/lib/postgresql/data` *(Persists PostgreSQL data)*
 
 ---
 
