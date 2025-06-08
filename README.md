@@ -81,7 +81,7 @@ docker login -u ejahdilan
 After running the command above you will prompted a PASSWORD use the token indicated below as the password
 
 `
-Visit the .env file to get the Access token to be able to pull the required images
+Visit the .env file to get the Access token to be able to pull the required images from Docker Hub
 `
 
 ### Step 4: Start the Services
