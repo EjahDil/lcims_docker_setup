@@ -1,0 +1,41 @@
+services:
+  backend:
+    image: ejahdilan/lcims-backend:production
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - DB_NAME=${DB_NAME}
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: always
+
+  db:
+    image: ejahdilan/lcims-db:production
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    restart: always
+
+  frontend:
+    image: ejahdilan/frontend:production
+    ports:
+      - "8000:5173"
+    volumes:
+      - ./config.json:/usr/share/nginx/html/config.json:ro
+    depends_on:
+      backend:
+        condition: service_started
+    restart: always
+
+volumes:
+  postgres_data:
+
