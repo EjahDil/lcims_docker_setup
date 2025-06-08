@@ -78,11 +78,11 @@ To log into my Docker Hub account use the command:
 docker login -u ejahdilan
 ```
 
-After running the command above you will prompted a PASSWORD use the token below as the password
+After running the command above you will prompted a PASSWORD use the token indicated below as the password
 
-```bash
-dckr_pat_GO2G62oNwBDM_RLyddSLX5ezOxg
-```
+`
+Visit the .env file to get the Access token to be able to pull the required images
+`
 
 ### Step 4: Start the Services
 
@@ -95,7 +95,7 @@ docker-compose up -d
 This services will start:
 
 - The **backend** at [http://localhost:3000](http://localhost:3000)
-- The **frontend** at [http://localhost:8000](http://localhost:8000)
+- The **frontend** at [http://localDOCKER_ACCESS_TOKENhost:8000](http://localhost:8000)
 
 ### Step 6: Stop the Services
 
