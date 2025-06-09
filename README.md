@@ -97,7 +97,7 @@ docker-compose up -d
 This services will start:
 
 - The **backend** at [http://localhost:3000](http://localhost:3000)
-- The **frontend** at [http://localDOCKER_ACCESS_TOKENhost:8000](http://localhost:8000)
+- The **frontend** at [http://localhost:8000](http://localhost:8000)
 
 ### Step 6: Stop the Services
 
