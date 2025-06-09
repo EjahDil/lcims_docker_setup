@@ -31,8 +31,6 @@ services:
     image: ejahdilan/frontend:production
     ports:
       - "8000:5173"
-    volumes:
-      - ./config.json:/usr/share/nginx/html/config.json:ro
     depends_on:
       backend:
         condition: service_started
